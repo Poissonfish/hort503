@@ -7,7 +7,7 @@ def cheese_and_crackers(cheese_count, boxes_of_crackers):
     # print a string
     print("Man that's enough for a party!")
     # print a string
-    print("Get a blanket.\n")
+    print("Get a blanket.\n")f=
 
 
 # print a string

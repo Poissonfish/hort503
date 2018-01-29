@@ -2,7 +2,7 @@
 print("I will now count my chickens:")
 
 # combine a string and a numerical calculation into one single string
-print("Hens", 25.0 + 30.0/ 6.0)
+print("Hens", 25.0 + 30.0 / 6.0)
 print("Roosters", 100.0 - 25.0 * 3.0 % 4.0)
 
 # print message
@@ -31,5 +31,3 @@ print("How about some more.")
 print("Is it greater?", 5 > -2)
 print("Is it greater or equal?", 5 >= -2)
 print("Is it less or equal?", 5 <= -2)
-
-
