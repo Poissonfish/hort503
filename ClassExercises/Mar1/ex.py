@@ -3,7 +3,7 @@ import plotly.plotly as py
 import plotly.graph_objs as go
 import matplotlib.pyplot as plt
 
-pdf = pd.read_csv("/Users/jameschen/Dropbox/GradSchool/*Spring_18/hort503/ClassExercises/Mar1/corn.csv")
+df = pd.read_csv("/Users/jameschen/Dropbox/GradSchool/*Spring_18/hort503/ClassExercises/Mar1/corn.csv")
 df = df.rename(columns = {'Genetically engineered (GE) corn varieties by State and United States, 2000-17':'State'})
 
 bt = pd.melt(frame = df.iloc[3:18, 0:19], id_vars = ["State"], var_name="Year", value_name="Percentage")
@@ -27,3 +27,10 @@ iowa_BT = new_df[(new_df["State"] == "Iowa") & (new_df["Variety"] == "BT")]
 iowa_BT
 tick = iowa_BT['Year'].sort_values()
 iowa_BT.plot(x = 'Year', y = 'Percentage', xticks = tick, rot = 45)
+iowa_BT['Year']
+
+# %%
+plt.figure(figsize=(10,6), dpi=80)
+plt.xticks(iowa_BT['Year'], iowa_BT['Year'])
+plt.plot(iowa_BT['Year'], iowa_BT['Percentage'], '-o')
+# %%
