@@ -52,7 +52,7 @@ def trim_read_end(read, min_q, min_size):
             return False
     read[1] = read[1][:indexHighQ + 1] + "\n"
     read[3] = read[3][:indexHighQ + 1] + "\n"
-    if len(read[3]) < min_size:
+    if len(read[3]) < min_size + 1:
         return False
     return read
 
@@ -92,7 +92,7 @@ def trim_read_front(read, min_q, min_size):
             return False
     read[1] = read[1][indexHighQ:]
     read[3] = read[3][indexHighQ:]
-    if len(read[3]) < min_size:
+    if len(read[3]) < min_size + 1:
         return False
     return read
 
@@ -142,7 +142,7 @@ def main(argv):
         if read != False:
             count_found += 1
             temp = trim_read_front(read, int(min_q), int(min_size))
-            temp = trim_read_end(temp, int(min_q), int(min_size))
+            # temp = trim_read_end(temp, int(min_q), int(min_size))
             if temp != False:
                 count_trimmed += 1
                 trim += temp
@@ -159,4 +159,4 @@ def main(argv):
 
 
 # Begin the program by calling the main function.
-main("argv")
+main(argv)
