@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="041d5058-be92-44b8-964b-374cf390d040" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/ClassExercises/Mar27/localhost:8888/?token=4bfa39e7648d7ba277fded46eba1ce244d3c4dacf10dc92a.ipynb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/ClassExercises/ktest.r" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Assignment11/.goslim_plant.obo.swo" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Assignment11/.goslim_plant.obo.swp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ClassExercises/ClassEx1.py" afterPath="$PROJECT_DIR$/ClassExercises/GameOfLife/ClassEx1.py" />
-      <change beforePath="$PROJECT_DIR$/ClassExercises/GameOfLife.py" afterPath="$PROJECT_DIR$/ClassExercises/GameOfLife/GameOfLife.py" />
-      <change beforePath="$PROJECT_DIR$/ClassExercises/Mar8.ipynb" afterPath="$PROJECT_DIR$/ClassExercises/GameOfLife/Mar8.ipynb" />
-      <change beforePath="$PROJECT_DIR$/Project/Project1/Project01.py" afterPath="$PROJECT_DIR$/Project/Project1/Project01.py" />
-      <change beforePath="$PROJECT_DIR$/Project/Project1/SP1.trim.fq" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Project/Project1/SP1.trim.fq2" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assignment10/~$signment10.docx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Project/Project2/Project02.py" afterPath="$PROJECT_DIR$/Project/Project2/Project02.py" />
+      <change beforePath="$PROJECT_DIR$/Project/Project2/inputs.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Project/Project2/output.txt" afterPath="$PROJECT_DIR$/Project/Project2/output.txt" />
+      <change beforePath="$PROJECT_DIR$/Project/Project2/plog.png" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,12 +19,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Project01.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Project/Project1/Project01.py">
+      <file leaf-file-name="Project02.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Project/Project2/Project02.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2806">
-              <caret line="122" column="60" lean-forward="true" selection-start-line="122" selection-start-column="60" selection-end-line="122" selection-end-column="60" />
-              <folding />
+            <state relative-caret-position="161">
+              <caret line="7" column="40" lean-forward="true" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -42,6 +41,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>variant</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -55,11 +59,13 @@
         <option value="$PROJECT_DIR$/Project/Project1/SP1.trim.fq" />
         <option value="$PROJECT_DIR$/Project/Project1/Project01.py" />
         <option value="$PROJECT_DIR$/ClassExercises/Mar27/localhost:8888/?token=4bfa39e7648d7ba277fded46eba1ce244d3c4dacf10dc92a.ipynb" />
+        <option value="$PROJECT_DIR$/ClassExercises/ktest.r" />
+        <option value="$PROJECT_DIR$/Project/Project2/Project02.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="22" />
+    <option name="y" value="52" />
     <option name="width" value="1680" />
     <option name="height" value="1028" />
   </component>
@@ -82,7 +88,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -94,6 +99,12 @@
               <item name="hort503" type="b2602c69:ProjectViewProjectNode" />
               <item name="hort503" type="462c0819:PsiDirectoryNode" />
               <item name="ClassExercises" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hort503" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hort503" type="462c0819:PsiDirectoryNode" />
+              <item name="ClassExercises" type="462c0819:PsiDirectoryNode" />
+              <item name="GameOfLife" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hort503" type="b2602c69:ProjectViewProjectNode" />
@@ -129,6 +140,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -152,7 +164,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Jupyter Notebook.hort503">
+  <component name="RunManager" selected="R.ktest">
     <configuration name="taskA" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -187,13 +199,22 @@
       <option name="ipnbHost" value="127.0.0.1" />
       <option name="ipnbPort" value="8888" />
     </configuration>
-    <list size="2">
+    <configuration name="ktest" type="RRunConfigurationType" factoryName="R" temporary="true">
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/ClassExercises/ktest.r" />
+      <option name="SCRIPT_ARGS" value="" />
+      <option name="WORKING_DIRECTORY_PATH" value="$PROJECT_DIR$/ClassExercises" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <envs />
+    </configuration>
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Jupyter Notebook.hort503" />
       <item index="1" class="java.lang.String" itemvalue="Python.taskA" />
+      <item index="2" class="java.lang.String" itemvalue="R.ktest" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Python.taskA" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="R.ktest" />
+        <item index="1" class="java.lang.String" itemvalue="Python.taskA" />
       </list>
     </recent_temporary>
   </component>
@@ -214,19 +235,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1680" height="1028" extended-state="6" />
+    <frame x="0" y="22" width="3840" height="1578" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12678571" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.055208333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932332" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15286459" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287234" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35531914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22416107" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -246,6 +267,33 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Project/Project2/Project02.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/Project2/Project02.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/Project1/Project01.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ClassExercises/Mar27/localhost:8888/?token=4bfa39e7648d7ba277fded46eba1ce244d3c4dacf10dc92a.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
@@ -257,7 +305,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2461">
           <caret line="107" column="1" lean-forward="true" selection-start-line="107" selection-start-column="1" selection-end-line="107" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -378,18 +425,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project/Project2/plog.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project/Project2/Project02.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1405">
-          <caret line="9" column="15" lean-forward="false" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/Project2/plog.png" />
     <entry file="file://$PROJECT_DIR$/Project/Project1/SP1.trim.fq" />
     <entry file="file://$PROJECT_DIR$/Project/Project1/SP1.out">
       <provider selected="true" editor-type-id="text-editor">
@@ -414,9 +450,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Project/Project1/Project01.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2806">
-          <caret line="122" column="60" lean-forward="true" selection-start-line="122" selection-start-column="60" selection-end-line="122" selection-end-column="60" />
+        <state relative-caret-position="345">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClassExercises/ktest.r">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/PycharmProjects/hort503_project2/venv/lib/python3.6/site-packages/matplotlib/axes/_axes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="6489" column="0" lean-forward="false" selection-start-line="6489" selection-start-column="0" selection-end-line="6490" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/Project2/Project02.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="40" lean-forward="true" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

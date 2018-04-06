@@ -6,7 +6,6 @@ import sys
 # input = "/Users/jameschen/Dropbox/GradSchool/*Spring_18/hort503/Project/Project2/input.txt"
 # output = "/Users/jameschen/Dropbox/GradSchool/*Spring_18/hort503/Project/Project2/output.txt"
 # outplot = "/Users/jameschen/Dropbox/GradSchool/*Spring_18/hort503/Project/Project2/plot.png"
-
 def main(argv):
     script, input, output, outplot = argv
 
@@ -23,7 +22,6 @@ class SNPCall(object):
 
     def __init__(self, input):
         self.df = pd.read_table(input, header = None)
-        self.variant = pd.Series(['A', 'T', 'C', 'G', 'a', 't', 'c', 'g'])
         self.out = pd.DataFrame({
             "Chromosome Name" : [],
             "Position" : [],
@@ -50,64 +48,88 @@ class SNPCall(object):
         return self.df
 
     def doCall(self):
-        variant = pd.Series(['A', 'T', 'C', 'G', 'a', 't', 'c', 'g'])
-        for row in range(len(self.df.index)) :
-            print(row)
+        print(f"Calling snp ...")
+        variant = pd.Series(['A', 'T', 'C', 'G'])
+        for row in range(len(self.df.index)):
             # Initialize values
             size = self.df.iloc[row, 3]
             read = self.df.iloc[row, 4]
             quality = self.df.iloc[row, 5]
             countVar = pd.Series(0, index = variant)
             countRef = 0
-            needNA = True
+            indexQ = 0
+            indexR = 0
             # read one character a time
-            for index in range(size):
+            while indexQ != size:
                 # get quality value
-                valQuality = quality[index]
+                valQuality = quality[indexQ]
                 # get read character
-                valRead = read[index]
-                # if the read quality is greater than 30
-                if getQInt(valQuality) > 30:
+                valRead = read[indexR]
+                if valRead in "$":
+                    indexR += 1
+                    valRead = read[indexR]
+                # if the read quality is greater than or equal 30
+                if getQInt(valQuality) >= 30:
                     # and the read is a reference
                     if isRef(valRead):
                         countRef += 1
                     # and the read is a variant
-                    elif isVar(valRead):
-                        countVar[valRead] += 1
+                    if isVar(valRead):
+                        countVar[valRead.upper()] += 1
+                indexQ += 1
+                indexR += 1
             # check if any variant occurs more than 3 times
             for var in variant:
                 if countVar[var] >= 3:
                     self.out = self.out.append(pd.DataFrame({
-                        "Chromosome Name" : [self.df.iloc[row, 0]],
-                        "Position" : [int(self.df.iloc[row, 1])],
-                        "Reference" : [self.df.iloc[row, 2]],
-                        "WinterDawn Base" : [var],
-                        "Frequency" : [(countVar[var])/(sum(countVar) + countRef)]}))
-                    needNA = False
+                            "Chromosome Name": [self.df.iloc[row, 0]],
+                            "Position": [self.df.iloc[row, 1].astype(int)],
+                            "Reference": [self.df.iloc[row, 2]],
+                            "WinterDawn Base": [var],
+                            "Frequency": [countVar[var]/size]
+                        })
+                    )
             # if no SNP found in the position
-            if needNA:
-                self.out = self.out.append(pd.DataFrame({
-                    "Chromosome Name" : [self.df.iloc[row, 0]],
-                    "Position" : [int(self.df.iloc[row, 1])],
-                    "Reference" : [self.df.iloc[row, 2]],
-                    "WinterDawn Base" : ['NA'],
-                    "Frequency" : [0]}))
+            # if needNA:
+            #     self.out = self.out.append(pd.DataFrame({
+            #         "Chromosome Name" : [self.df.iloc[row, 0]],
+            #         "Position" : [int(self.df.iloc[row, 1])],
+            #         "Reference" : [self.df.iloc[row, 2]],
+            #         "WinterDawn Base" : ['NA'],
+            #         "Frequency" : [0]}))
 
     def outFile(self, name):
         print(f"Generating result table to {name} ...")
+        self.out['Position'] = self.out['Position'].astype(int)
         self.out.to_csv(name, "\t", index=False,
-            header=True,
+            header=False,
             columns=["Chromosome Name", "Position", "Reference", "WinterDawn Base", "Frequency"])
 
     def outPlot(self, name):
         print(f"Generating plot to {name} ...")
-        plt.figure(figsize=(10,6), dpi=300)
+        plt.figure(figsize=(15, 5), dpi=300)
         plt.xlabel('Position')
         plt.ylabel('SNP Frequencies')
         plt.title('SNP Call of Winter Dawn')
-        plt.xticks(np.arange(1, 60881, 1000), np.arange(1, 60881 , 1000), fontsize = 6, rotation = 45)
-        plt.plot(self.out['Position'], self.out['Frequency'], '-o')
+        # create plot
+        width = 30
+        alpha = .4
+        indexA = self.out['WinterDawn Base'].str.contains("[A]")
+        indexT = self.out['WinterDawn Base'].str.contains("[T]")
+        indexC = self.out['WinterDawn Base'].str.contains("[C]")
+        indexG = self.out['WinterDawn Base'].str.contains("[G]")
+        plt.bar(self.out['Position'][indexA], self.out['Frequency'][indexA],
+                width=width, alpha=alpha, color='b', label='SNP:A', snap=False)
+        plt.bar(self.out['Position'][indexT], self.out['Frequency'][indexT],
+                width=width, alpha=alpha, color='g', label='SNP:T', snap=False)
+        plt.bar(self.out['Position'][indexC], self.out['Frequency'][indexC],
+                width=width, alpha=alpha, color='k', label='SNP:C', snap=False)
+        plt.bar(self.out['Position'][indexG], self.out['Frequency'][indexG],
+                width=width, alpha=alpha, color='r', label='SNP:G', snap=False)
+        plt.legend()
+        plt.tight_layout()
         plt.savefig(name)
+        # plt.show()
 
 def isRef(char):
     return True if pd.Series(char).str.contains("[.,]")[0] else False
