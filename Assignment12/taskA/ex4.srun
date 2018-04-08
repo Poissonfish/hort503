@@ -1,0 +1,12 @@
+#!/bin/bash
+#SBATCH --partition=hort503-01-s18        ### Partition (like a queue in PBS)
+#SBATCH --account=hort503-01-s18
+#SBATCH --job-name=ex4     ### Job Name
+#SBATCH --output=ex4.out         ### File in which to store job output
+#SBATCH --error=ex4.err          ### File in which to store job error messages
+#SBATCH --time=0-00:01:00       ### Wall clock time limit in Days-HH:MM:SS
+#SBATCH --nodes=1               ### Node count required for the job
+#SBATCH --ntasks-per-node=1     ### Nuber of tasks to be launched per Node
+module add python3/3.6.5
+python3 ex4.py
+
