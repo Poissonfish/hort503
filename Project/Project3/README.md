@@ -1,6 +1,8 @@
-### Summary
+# Project 03
 
-### USAGE
+### Summary
+This
+### Usage
 ```
 sh doBatchBlast.srun [query file] [database name]
 ```
@@ -11,22 +13,23 @@ sh doBatchBlast.srun [query file] [database name]
 * blast 2.7.1+
 
 ### Output
-  * #### Directory
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp;  **splitFSA**: The split query files will be placed here
-
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp;  **splitOut**: The blast result of each query files will be generated here
-
-  * #### File;
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp; **doBatchBlast.err** : A place where error messages stored
-
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp; **doBatchBlast.out** : A place where log message stored
+  * #### File
 
   &nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp; **summary.out**:
 
   &nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp; **blast.out**:
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp; **doBatchBlast.err** : A place where error messages stored
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp; **doBatchBlast.out** : A place where log message stored
+
+  * #### Directory
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;  **splitFSA**: The split query files will be placed here
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;  **splitOut**: The blast result of each query files will be generated here
