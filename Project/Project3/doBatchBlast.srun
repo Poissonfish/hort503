@@ -2,8 +2,8 @@
 #SBATCH --partition=hort503-01-s18        ### Partition (like a queue in PBS)
 #SBATCH --account=hort503-01-s18
 #SBATCH --job-name=project03              ### Job Name
-#SBATCH --output=doBatchBlast.out         ### File in which to store job output
-#SBATCH --error=doBatchBlast.err          ### File in which to store job error messages
+#SBATCH --output=DoBatchBlast.out         ### File in which to store job output
+#SBATCH --error=DoBatchBlast.err          ### File in which to store job error messages
 #SBATCH --time=3-00:00:00                 ### Wall clock time limit in Days-HH:MM:SS
 #SBATCH --nodes=5                         ### Node count required for the job
 #SBATCH --ntasks-per-node=2               ### Nuber of tasks to be launched per Node
@@ -36,19 +36,7 @@
     echo "Processing $f file..."
     blastp -query "splitFSA/${f}.fasta" -db $dbName -outfmt \
      "6 qacc sacc stitle pident length mismatch gapopen qstart qend sstart send evalue bitscore" \
-     -out "splitOut/${f}.out"
+     -out "splitOut/${f}.out" &
   done
-# Combine reulsts of files into one
-  echo "Combining results..."
-  rm blast.out
-  cat splitOut/seq_*.out >> blast.out
-# Summarize result
-  echo "Summarizing results..."
-  awk 'BEGIN{FS="\t"}
-  {
-    array[$3]++
-  }
-  END{for(i in array) print i,"\t",array[i]}' blast.out | \
-  sort -t$'\t' -nrk2 > summary.out
 
-echo "All procedures done!"
+echo "Please use 'ls split*' to check the progress"
