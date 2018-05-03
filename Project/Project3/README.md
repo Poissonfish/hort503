@@ -10,9 +10,19 @@ sbatch DoBatchBlast.srun [query file] [database name]
 ```
 Then users can use ```ls split*``` to check the progress. When the number of files in folder 'splitOut' is same as number in folder 'splitFSA', users can use :
 ```
-sh SummarizeBlast.sh [Path contains directory 'splitOut']
+sh SummarizeBlast.sh [Path to a place that contains the directory 'splitOut']
 ```
 to summarize the results.
+
+### Example
+```
+cd /home/chun-peng.chen/project03/
+sbatch data/hort503_01_s18/example-data/all.pep /data/hort503_01_s18/example-data/swissprot
+```
+When the blast tasks done, do :
+```
+sh SummarizeBlast.sh /home/chun-peng.chen/project03/
+```
 
 ### Prerequisite
 * Unix system
