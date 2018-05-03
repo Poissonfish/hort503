@@ -17,7 +17,7 @@ sh doBatchBlast.srun [query file] [database name]
   * #### File
 
   &nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp; **summary.out** :
+  &nbsp;&nbsp;&nbsp;&nbsp; **summary.out** : A tab delimited summary file, which contains two columns. The first column is the matched protein name, and the second column is the total number of alignments matches for that protein.  This file is sorted by the number of hits occurs.  
 
   &nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp; **blast.out** : A tab-delimited table of blast results, which contains:
