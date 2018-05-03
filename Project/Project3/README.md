@@ -1,7 +1,8 @@
 # Project 03
 
 ### Summary
-This
+Given any FASTA file, this program will split the file into several piece of subfiles. Every subfiles won't contain more than 5,000 sequences and will be analyzed by 'blastp' program with the given database. Afterward this program will generate a summary table which would show the name of matches proteins and the total number of alignments matches for that protein. 
+
 ### Usage
 ```
 sh doBatchBlast.srun [query file] [database name]
@@ -22,10 +23,10 @@ sh doBatchBlast.srun [query file] [database name]
   &nbsp;&nbsp;&nbsp;&nbsp; **blast.out**:
 
   &nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp; **doBatchBlast.err** : A place where error messages stored
+  &nbsp;&nbsp;&nbsp;&nbsp; **doBatchBlast.err** : A place where error messages are stored
 
   &nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp; **doBatchBlast.out** : A place where log message stored
+  &nbsp;&nbsp;&nbsp;&nbsp; **doBatchBlast.out** : A place where log message are stored
 
   * #### Directory
   &nbsp;&nbsp;&nbsp;&nbsp;
