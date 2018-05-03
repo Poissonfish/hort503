@@ -1,7 +1,9 @@
 ### Summary
 
 ### USAGE
-&nbsp;&nbsp;&nbsp;&nbsp; sh doBatchBlast.srun [query file] [database name]
+```
+sh doBatchBlast.srun [query file] [database name]
+```
 
 ### Prerequisite
 * Unix system
