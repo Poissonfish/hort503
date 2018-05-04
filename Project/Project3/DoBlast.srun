@@ -1,0 +1,21 @@
+#!/bin/bash
+#SBATCH --partition=hort503-01-s18        ### Partition (like a queue in PBS)
+#SBATCH --account=hort503-01-s18
+#SBATCH --job-name=BlastJob_%A            ### Job Name
+#SBATCH --output=BlastResult/Blast_%a.out ### File in which to store job output
+#SBATCH --error=BlastResult/Blast_%a.err  ### File in which to store job error messages
+#SBATCH --time=1-00:00:00                 ### Wall clock time limit in Days-HH:MM:SS
+#SBATCH --nodes=2                         ### Node count required for the job
+#SBATCH --ntasks-per-node=2               ### Number of tasks to be launched per Node
+#SBATCH --cpus-per-task=6                ### Number of threads per task
+
+# Load module
+  module add blast
+# Get arguments
+  dbName=$1
+# Run blast
+  echo "Blasting seq_${SLURM_ARRAY_TASK_ID}.fasta ..."
+  blastp -query "SplitFSA/seq_${SLURM_ARRAY_TASK_ID}.fasta" -db $dbName -outfmt \
+  "6 qacc sacc stitle pident length mismatch gapopen qstart qend sstart send evalue bitscore" \
+  -out "BlastResult/seq_${SLURM_ARRAY_TASK_ID}.out"
+  echo "Done!"

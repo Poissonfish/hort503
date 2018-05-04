@@ -116,7 +116,6 @@ sh SummarizeBlast.sh /home/chun-peng.chen/project03/
   Processing seq_10 file...
   ```
 
-
   * #### Directory
   &nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;  **splitFSA**: The split query files will be placed here
