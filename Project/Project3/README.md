@@ -4,11 +4,13 @@
 Given any FASTA file, this program will split the file into several piece of subfiles. Each subfile won't contain more than 5,000 sequences and will be analyzed by 'blastp' program with the given database. Afterward this program will generate a summary table which would show the name of matches proteins and the total number of alignments matches for that protein.
 
 ### Usage
-* First step: run 'DoBatchBlast.srun' as follow
+* First step: Run 'DoBatchBlast.srun' as follow
 ```
 sh DoBatchBlast.sh [query file] [database name]
 ```
-Then users can use ```tail BlastResult/Blast_*``` to check the progress. After the blast tasks done, users can use :
+Then users can use ```tail BlastResult/Blast_*``` to check the progress.
+
+* Second step:  After the blast tasks done, users can use
 ```
 sh SummarizeBlast.sh [Path to a directory that contains blast results]
 ```
