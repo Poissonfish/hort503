@@ -1,27 +1,27 @@
 # Project 03
 
 ### Summary
-Given any FASTA file, this program will split the file into several piece of subfiles. Every subfiles won't contain more than 5,000 sequences and will be analyzed by 'blastp' program with the given database. Afterward this program will generate a summary table which would show the name of matches proteins and the total number of alignments matches for that protein.
+Given any FASTA file, this program will split the file into several piece of subfiles. Each subfile won't contain more than 5,000 sequences and will be analyzed by 'blastp' program with the given database. Afterward this program will generate a summary table which would show the name of matches proteins and the total number of alignments matches for that protein.
 
 ### Usage
-First run 'DoBatchBlast.srun' as follow:
+* First step: run 'DoBatchBlast.srun' as follow
 ```
-sbatch DoBatchBlast.srun [query file] [database name]
+sh DoBatchBlast.sh [query file] [database name]
 ```
-Then users can use ```ls split*``` to check the progress. When the number of files in folder 'splitOut' is same as number in folder 'splitFSA', users can use :
+Then users can use ```tail BlastResult/Blast_*``` to check the progress. After the blast tasks done, users can use :
 ```
-sh SummarizeBlast.sh [Path to a place that contains the directory 'splitOut']
+sh SummarizeBlast.sh [Path to a directory that contains blast results]
 ```
 to summarize the results.
 
 ### Example
 ```
-cd /home/chun-peng.chen/project03/
-sbatch data/hort503_01_s18/example-data/all.pep /data/hort503_01_s18/example-data/swissprot
+cd ~/project03/
+sh DoBatchBlast.sh ~/project03/all.pep ~/project03/swissprot
 ```
-When the blast tasks done, do :
+After the blast tasks done, do :
 ```
-sh SummarizeBlast.sh /home/chun-peng.chen/project03/
+sh SummarizeBlast.sh ~/project03/BlastResult
 ```
 
 ### Prerequisite
@@ -33,10 +33,10 @@ sh SummarizeBlast.sh /home/chun-peng.chen/project03/
   * #### File
 
   &nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp; **summary.out** : A tab delimited summary file, which contains two columns. The first column is the matched protein name, and the second column is the total number of alignments matches for that protein.  This file is sorted by the number of hits occurs.  
+  &nbsp;&nbsp;&nbsp;&nbsp; **Summary.out** : A tab delimited summary file, which contains two columns. The first column is the matched protein name, and the second column is the total number of alignments matches for that protein.  This file is sorted by the number of hits occurs.  
 
   &nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp; **blast.out** : A tab-delimited table of blast results, which contains:
+  &nbsp;&nbsp;&nbsp;&nbsp; **seq_all.out** : A tab-delimited table of blast results, which contains:
 
   &nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;
@@ -103,22 +103,10 @@ sh SummarizeBlast.sh /home/chun-peng.chen/project03/
   &nbsp;&nbsp;&nbsp;&nbsp;
   &nbsp;&nbsp;&nbsp;&nbsp;  13.	Bitscore
 
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp; **doBatchBlast.err** : A place where error messages are stored
-
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp; **doBatchBlast.out** : A place where log message are stored. Users can track the progress from this file as shown below:
-
-  ```
-  Getting arguments ...
-  Splitting files...
-  Running BLAST...
-  Processing seq_10 file...
-  ```
 
   * #### Directory
   &nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp;  **splitFSA**: The split query files will be placed here
+  &nbsp;&nbsp;&nbsp;&nbsp;  **SplitFSA**: The split query files will be placed here
 
   &nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp;  **splitOut**: The blast result of each query files will be generated here
+  &nbsp;&nbsp;&nbsp;&nbsp;  **BlastResult**: The blast result of each query file will be generated here

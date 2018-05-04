@@ -27,6 +27,6 @@
   sbatch --array="1-${nFiles}" DoBlast.srun ${dbName}
 
 echo "============================================"
-echo "Please use 'ls split*' to check the progress"
-echo "After the tasks done, use 'sh SummarizeBlast.sh ${wd}' to summarize the results"
+echo "Please use 'tail BlastResult/Blast_*' to check the progress"
+echo "After the tasks done, use 'sh SummarizeBlast.sh ${wd}/BlastResult' to summarize the results"
 echo "============================================"
